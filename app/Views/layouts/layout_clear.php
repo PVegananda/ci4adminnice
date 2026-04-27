@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><?= $title ?? 'NiceAdmin - Dashboard'; ?></title>
+  <title>Toko - Login</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -40,22 +40,11 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <?= view('partials/header'); ?>
-  <!-- End Header -->
-
-  <!-- ======= Sidebar ======= -->
-  <?= view('partials/sidebar'); ?>
-  <!-- End Sidebar -->
-
   <!-- ======= Main Content ======= -->
-  <main id="main" class="main">
+  <main>
     <?= $this->renderSection('content'); ?>
   </main><!-- End #main -->
   <!-- End Main Content -->
-
-  <!-- ======= Footer ======= -->
-  <?= view('partials/footer'); ?>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

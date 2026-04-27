@@ -3,6 +3,7 @@ $this->extend('layouts/main');
 $this->section('content');
 ?>
 
+<!-- ======= Page Title ======= -->
 <div class="pagetitle">
   <h1>Dashboard</h1>
   <nav>
@@ -13,6 +14,7 @@ $this->section('content');
   </nav>
 </div><!-- End Page Title -->
 
+<!-- ======= Dashboard Section ======= -->
 <section class="section dashboard">
   <div class="row">
 
@@ -20,7 +22,7 @@ $this->section('content');
     <div class="col-lg-8">
       <div class="row">
 
-        <!-- Sales Card -->
+        <!-- ======= Sales Card ======= -->
         <div class="col-xxl-4 col-md-6">
           <div class="card info-card sales-card">
 
@@ -55,7 +57,7 @@ $this->section('content');
           </div>
         </div><!-- End Sales Card -->
 
-        <!-- Revenue Card -->
+        <!-- ======= Revenue Card ======= -->
         <div class="col-xxl-4 col-md-6">
           <div class="card info-card revenue-card">
 
@@ -90,7 +92,7 @@ $this->section('content');
           </div>
         </div><!-- End Revenue Card -->
 
-        <!-- Customers Card -->
+        <!-- ======= Customers Card ======= -->
         <div class="col-xxl-4 col-xl-12">
 
           <div class="card info-card customers-card">
@@ -130,10 +132,10 @@ $this->section('content');
       </div>
     </div><!-- End Left side columns -->
 
-    <!-- Right side columns -->
+    <!-- ======= Right side columns ======= -->
     <div class="col-lg-4">
 
-      <!-- Recent Activity -->
+      <!-- ======= Recent Activity ======= -->
       <div class="card">
         <div class="filter">
           <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -209,6 +211,6 @@ $this->section('content');
     </div><!-- End Right side columns -->
 
   </div>
-</section>
+</section><!-- End Dashboard Section -->
 
 <?php $this->endSection(); ?>

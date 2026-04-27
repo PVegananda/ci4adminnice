@@ -3,6 +3,7 @@ $this->extend('layouts/main');
 $this->section('content');
 ?>
 
+<!-- ======= Page Title ======= -->
 <div class="pagetitle">
   <h1>Produk</h1>
   <nav>
@@ -13,17 +14,19 @@ $this->section('content');
   </nav>
 </div><!-- End Page Title -->
 
+<!-- ======= Produk Section ======= -->
 <section class="section">
   <div class="row">
     <div class="col-lg-12">
+      <!-- ======= Card ======= -->
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Produk</h5>
           <p>ini halaman produk</p>
         </div>
-      </div>
+      </div><!-- End Card -->
     </div>
   </div>
-</section>
+</section><!-- End Produk Section -->
 
 <?php $this->endSection(); ?>

@@ -59,8 +59,8 @@ class Home extends BaseController
     // Pages
     public function profile(): string
     {
-        return view('showcase/pages/pages-profile', [
-            'title' => 'Profile - NiceAdmin'
+        return view('v_profile', [
+            'title' => 'Profile - Toko'
         ]);
     }
 

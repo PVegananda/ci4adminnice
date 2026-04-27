@@ -1,13 +1,16 @@
+<!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
 
+  <!-- ======= Logo ======= -->
   <div class="d-flex align-items-center justify-content-between">
     <a href="<?= base_url('/'); ?>" class="logo d-flex align-items-center">
       <img src="<?= base_url('assets/img/logo.png'); ?>" alt="Logo">
-      <span class="d-none d-lg-block">NiceAdmin</span>
+      <span class="d-none d-lg-block">Toko</span>
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->
 
+  <!-- ======= Search Bar ======= -->
   <div class="search-bar">
     <form class="search-form d-flex align-items-center" method="GET" action="#">
       <input type="text" name="query" placeholder="Search" title="Enter search keyword">
@@ -15,15 +18,18 @@
     </form>
   </div><!-- End Search Bar -->
 
+  <!-- ======= Header Nav ======= -->
   <nav class="header-nav ms-auto">
     <ul class="d-flex align-items-center">
 
+      <!-- ======= Search Icon ======= -->
       <li class="nav-item d-block d-lg-none">
         <a class="nav-link nav-icon search-bar-toggle" href="#">
           <i class="bi bi-search"></i>
         </a>
       </li><!-- End Search Icon-->
 
+      <!-- ======= Notification Icon ======= -->
       <li class="nav-item dropdown">
 
         <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
@@ -31,6 +37,7 @@
           <span class="badge bg-primary badge-number">4</span>
         </a><!-- End Notification Icon -->
 
+        <!-- ======= Notification Dropdown Items ======= -->
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
           <li class="dropdown-header">
             You have 4 new notifications
@@ -99,6 +106,7 @@
 
       </li><!-- End Notification Nav -->
 
+      <!-- ======= Messages Icon ======= -->
       <li class="nav-item dropdown">
 
         <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
@@ -106,6 +114,7 @@
           <span class="badge bg-success badge-number">3</span>
         </a><!-- End Messages Icon -->
 
+        <!-- ======= Messages Dropdown Items ======= -->
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
           <li class="dropdown-header">
             You have 3 new messages
@@ -165,13 +174,15 @@
 
       </li><!-- End Messages Nav -->
 
+      <!-- ======= Profile Dropdown ======= -->
       <li class="nav-item dropdown pe-3">
 
         <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
           <img src="<?= base_url('assets/img/profile-img.jpg'); ?>" alt="Profile" class="rounded-circle">
-          <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          <span class="d-none d-md-block dropdown-toggle ps-2"><?= session()->get('username'); ?> (<?= session()->get('role'); ?>)</span>
         </a><!-- End Profile Image Icon -->
 
+        <!-- ======= Profile Dropdown Items ======= -->
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
           <li class="dropdown-header">
             <h6>Kevin Anderson</h6>
@@ -212,7 +223,7 @@
           </li>
 
           <li>
-            <a class="dropdown-item d-flex align-items-center" href="#">
+            <a class="dropdown-item d-flex align-items-center" href="<?= base_url('/logout'); ?>">
               <i class="bi bi-box-arrow-right"></i>
               <span>Sign Out</span>
             </a>
