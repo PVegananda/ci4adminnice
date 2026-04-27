@@ -1,0 +1,14 @@
+run = "php spark serve --host 0.0.0.0 --port 8080"
+
+[env]
+PHP_VERSION = "8.2"
+
+[nix]
+channel = "stable-23_11"
+
+[[ports]]
+localPort = 8080
+externalPort = 443
+
+[unitTest]
+language = "php"

@@ -1,52 +1,171 @@
-# CodeIgniter 4 Application Starter
+# Toko Admin Dashboard
 
-## What is CodeIgniter?
+A clean, responsive admin dashboard built with **CodeIgniter 4** and **Bootstrap 5**. Perfect for e-commerce or admin panel projects.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## 🚀 Live Demo
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+**Username:** `april`  
+**Password:** `123`
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+---
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## ✨ Features
 
-## Installation & updates
+- 🔐 **Session-based Authentication** - Secure login system
+- 👤 **User Profile Page** - Display user information from session
+- 📱 **Responsive Design** - Mobile-friendly NiceAdmin template
+- 🎨 **Bootstrap 5** - Modern UI components
+- 🔒 **Route Protection** - Auth filter for protected pages
+- 👨‍💼 **Role-based Access** - Admin-only menu items
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+---
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+## 📋 Menu Items
 
-## Setup
+| Item | Role | Description |
+|------|------|-------------|
+| Home | All | Dashboard home page |
+| Keranjang | All | Shopping cart page |
+| Produk | Admin Only | Products management |
+| Profile | All | User profile & session data |
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+---
 
-## Important Change with index.php
+## 🛠️ Tech Stack
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- **Backend:** CodeIgniter 4.7+ (PHP 8.2+)
+- **Frontend:** Bootstrap 5.2.3
+- **Database:** Optional (currently using static auth)
+- **Session:** CodeIgniter Session Library
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+---
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## 🔧 Installation (Local)
 
-## Repository Management
+### Prerequisites
+- PHP 8.2+
+- Composer
+- XAMPP or similar
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+### Steps
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd ci4adminnice
+   ```
+
+2. **Install dependencies**
+   ```bash
+   composer install
+   ```
+
+3. **Copy environment file**
+   ```bash
+   cp env .env
+   ```
+
+4. **Set base URL** (edit `.env`)
+   ```
+   app.baseURL = 'http://localhost:8080/'
+   ```
+
+5. **Start the server**
+   ```bash
+   php spark serve
+   ```
+
+6. **Access the app**
+   - Open http://localhost:8080/login
+   - Login with: `april` / `123`
+
+---
+
+## 📄 File Structure
+
+```
+app/
+├── Controllers/
+│   ├── AuthController.php      # Login/Logout logic
+│   └── Home.php                # Main dashboard
+├── Filters/
+│   └── Auth.php                # Route protection filter
+└── Views/
+    ├── layouts/
+    │   ├── main.php            # Main layout (with sidebar)
+    │   └── layout_clear.php     # Login page layout
+    ├── partials/
+    │   ├── header.php           # Top navigation
+    │   ├── sidebar.php          # Left navigation menu
+    │   └── footer.php           # Page footer
+    ├── v_login.php              # Login form
+    └── v_profile.php            # User profile page
+```
+
+---
+
+## 🔑 Default Credentials
+
+| Username | Password | Role |
+|----------|----------|------|
+| april | 123 | admin |
+
+**⚠️ For production:** Replace static credentials with database authentication.
+
+---
+
+## 🚀 Deploy to Replit
+
+### 1. Push to GitHub
+
+```bash
+cd /path/to/ci4adminnice
+git init
+git add .
+git commit -m "CodeIgniter 4 Admin Dashboard"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/ci4adminnice.git
+git push -u origin main
+```
+
+### 2. Create Replit Project
+
+1. Go to [replit.com](https://replit.com)
+2. Click **"Create"** → **"Import from GitHub"**
+3. Select your repository (`YOUR_USERNAME/ci4adminnice`)
+4. Replit auto-configures PHP
+5. Click **"Run"** to start the server
+6. Share the generated URL!
+
+### 3. First Run on Replit
+
+- Navigate to `/login`
+- Login: `april` / `123`
+- Start using the dashboard!
+
+---
+
+## 📝 Notes
+
+- **Sessions:** CodeIgniter 4 sessions work on Replit (stored in `writable/session/`)
+- **Database:** Currently uses static credentials. To use a database on Replit:
+  - Add MySQL service in Replit
+  - Update `Config/Database.php`
+  - Create migration for users table
+- **Environment:** Production mode is recommended for Replit deployment
+
+---
+
+## 📞 Support
+
+For issues or questions:
+1. Check the [CodeIgniter 4 Documentation](https://codeigniter.com)
+2. Review the code comments in `app/Controllers/AuthController.php`
+3. Check `Config/Filters.php` for route protection setup
+
+---
+
+**Made with ❤️ using CodeIgniter 4**
 
 ## Server Requirements
 
