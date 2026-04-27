@@ -4,11 +4,11 @@ $this->section('content');
 ?>
 
 <div class="pagetitle">
-  <h1>Produk</h1>
+  <h1>Accordion</h1>
   <nav>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="<?= base_url('/'); ?>">Home</a></li>
-      <li class="breadcrumb-item active">Produk</li>
+      <li class="breadcrumb-item active">Accordion</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
@@ -18,8 +18,8 @@ $this->section('content');
     <div class="col-lg-12">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Produk</h5>
-          <p>ini halaman produk</p>
+          <h5 class="card-title">Accordion</h5>
+          <p>Add content here</p>
         </div>
       </div>
     </div>
